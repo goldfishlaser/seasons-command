@@ -38,19 +38,19 @@ debug: build-main
 debug-test: build-test
 	$(DBG) ./build/test
 
-.PHONY: build-moon
-build-moon: build-dir
-	$(CC) -Wall -O0 -g -o build/moon src/main.c -lm
+.PHONY: build-seasons
+build-seasons: build-dir
+	$(CC) -Wall -O0 -g -o build/seasons src/main.c -lm
 
-.PHONY: run-moon
-run-moon:build-moon
-	./build/moon
+.PHONY: run-seasons
+run-seasons:build-seasons
+	./build/seasons
 
-.PHONY: debug-moon
-debug-moon: build-moon
-	$(DBG) ./build/moon
+.PHONY: debug-seasons
+debug-seasons: build-seasons
+	$(DBG) ./build/seasons
 
-.PHONY: install-moon
-install-moon: build-moon
-	cp build/moon /usr/local/bin/moon
+.PHONY: install-seasons
+install-seasons: build-seasons
+	cp build/seasons /usr/local/bin/seasons
 
